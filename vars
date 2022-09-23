@@ -1,0 +1,23 @@
+#
+# this file contains a number of global variables used
+# by the docker container and its scripts. update any
+# of these to be appropriate for your environment.
+#
+
+IMAGE_NAME="chrony-nts"
+CONTAINER_NAME="chrony"
+MAINTAINER="m.polinowski@gmail.com"
+
+# (optional) define ntp server(s) to use
+# if none are provided a default is chosen
+# ntp server list must: be comma delimited and NOT contain spaces
+# NTP_SERVERS="time1.google.com,time2.google.com,time3.google.com,time4.google.com"
+NTP_SERVERS="0.de.pool.ntp.org,time.cloudflare.com,time1.google.com"
+
+# (optional) define chrony log level to use
+# default: 0
+# options: 0 (informational), 1 (warning), 2 (non-fatal error), and 3 (fatal error)
+LOG_LEVEL=1
+
+# (optional) additional docker run options you may want
+DOCKER_OPTS=""
